@@ -1,0 +1,5 @@
+db:
+  name: calorie.sql
+  driver: mysql
+web:
+  port: 8080
