@@ -1,0 +1,569 @@
+2021/12/18 06:06:55 server.go:3197: http: panic serving 192.168.80.1:60264: runtime error: invalid memory address or nil pointer dereference
+goroutine 34 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xbf
+panic({0x6a8a20, 0x8f4940})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+database/sql.(*DB).conn(0x0, {0x7692d8, 0xc000018680}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1290 +0x53
+database/sql.(*DB).exec(0x40?, {0x7692d8, 0xc000018680}, {0xc0001f6050, 0x46}, {0xc0001d7920, 0x5, 0x5}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1657 +0x5d
+database/sql.(*DB).ExecContext(0xc0001901e0?, {0x7692d8, 0xc000018680}, {0xc0001f6050, 0x46}, {0xc0001d7920, 0x5, 0x5})
+	/usr/local/go/src/database/sql/sql.go:1635 +0xe5
+database/sql.(*DB).Exec(...)
+	/usr/local/go/src/database/sql/sql.go:1653
+github.com/nagokos/calorie_backend/models.(*User).Create(0xc0001fc000, {0xc0001ac240, 0x3c})
+	/go/src/app/models/user.go:30 +0x23f
+github.com/nagokos/calorie_backend/controllers.UserCreate({0x7690f0, 0xc0001a62a0}, 0xc0001e4100)
+	/go/src/app/controllers/user.go:42 +0x258
+net/http.HandlerFunc.ServeHTTP(0x72?, {0x7690f0?, 0xc0001a62a0?}, 0xc0001da290?)
+	/usr/local/go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7690f0, 0xc0001a62a0}, 0xc0001e4100)
+	/usr/local/go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0x768528?}, {0x7690f0, 0xc0001a62a0}, 0xc0001e4100)
+	/usr/local/go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0001980a0, {0x769348, 0xc0001941e0})
+	/usr/local/go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x4db
+2021/12/18 06:06:55 server.go:3197: http: panic serving 192.168.80.1:60266: runtime error: invalid memory address or nil pointer dereference
+goroutine 37 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xbf
+panic({0x6a8a20, 0x8f4940})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+database/sql.(*DB).conn(0x0, {0x7692d8, 0xc000018680}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1290 +0x53
+database/sql.(*DB).exec(0x40?, {0x7692d8, 0xc000018680}, {0xc0000be050, 0x46}, {0xc00010b920, 0x5, 0x5}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1657 +0x5d
+database/sql.(*DB).ExecContext(0xc0000c20f0?, {0x7692d8, 0xc000018680}, {0xc0000be050, 0x46}, {0xc00010b920, 0x5, 0x5})
+	/usr/local/go/src/database/sql/sql.go:1635 +0xe5
+database/sql.(*DB).Exec(...)
+	/usr/local/go/src/database/sql/sql.go:1653
+github.com/nagokos/calorie_backend/models.(*User).Create(0xc0000ce000, {0xc0000d6080, 0x3c})
+	/go/src/app/models/user.go:30 +0x23f
+github.com/nagokos/calorie_backend/controllers.UserCreate({0x7690f0, 0xc0000ca000}, 0xc0001e4200)
+	/go/src/app/controllers/user.go:42 +0x258
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x7690f0?, 0xc0000ca000?}, 0xc0000b8090?)
+	/usr/local/go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7690f0, 0xc0000ca000}, 0xc0001e4200)
+	/usr/local/go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0x768528?}, {0x7690f0, 0xc0000ca000}, 0xc0001e4200)
+	/usr/local/go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0001981e0, {0x769348, 0xc0001941e0})
+	/usr/local/go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x4db
+2021/12/18 06:08:05 server.go:3197: http: panic serving 192.168.80.1:60270: runtime error: invalid memory address or nil pointer dereference
+goroutine 10 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xbf
+panic({0x6a8a20, 0x8f4940})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+database/sql.(*DB).conn(0x0, {0x7692d8, 0xc000018680}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1290 +0x53
+database/sql.(*DB).exec(0x40?, {0x7692d8, 0xc000018680}, {0xc00020e050, 0x46}, {0xc00010d920, 0x5, 0x5}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1657 +0x5d
+database/sql.(*DB).ExecContext(0xc0002120f0?, {0x7692d8, 0xc000018680}, {0xc00020e050, 0x46}, {0xc00010d920, 0x5, 0x5})
+	/usr/local/go/src/database/sql/sql.go:1635 +0xe5
+database/sql.(*DB).Exec(...)
+	/usr/local/go/src/database/sql/sql.go:1653
+github.com/nagokos/calorie_backend/models.(*User).Create(0xc000228000, {0xc00022a100, 0x3c})
+	/go/src/app/models/user.go:30 +0x23f
+github.com/nagokos/calorie_backend/controllers.UserCreate({0x7690f0, 0xc00021e000}, 0xc0001a0100)
+	/go/src/app/controllers/user.go:42 +0x258
+net/http.HandlerFunc.ServeHTTP(0x72?, {0x7690f0?, 0xc00021e000?}, 0xc0002040a0?)
+	/usr/local/go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7690f0, 0xc00021e000}, 0xc0001a0100)
+	/usr/local/go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0x768528?}, {0x7690f0, 0xc00021e000}, 0xc0001a0100)
+	/usr/local/go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00010ed20, {0x769348, 0xc00006f920})
+	/usr/local/go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x4db
+2021/12/18 06:08:06 server.go:3197: http: panic serving 192.168.80.1:60272: runtime error: invalid memory address or nil pointer dereference
+goroutine 35 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xbf
+panic({0x6a8a20, 0x8f4940})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+database/sql.(*DB).conn(0x0, {0x7692d8, 0xc000018680}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1290 +0x53
+database/sql.(*DB).exec(0x40?, {0x7692d8, 0xc000018680}, {0xc000116370, 0x46}, {0xc0001a9920, 0x5, 0x5}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1657 +0x5d
+database/sql.(*DB).ExecContext(0xc0000163d8?, {0x7692d8, 0xc000018680}, {0xc000116370, 0x46}, {0xc0001a9920, 0x5, 0x5})
+	/usr/local/go/src/database/sql/sql.go:1635 +0xe5
+database/sql.(*DB).Exec(...)
+	/usr/local/go/src/database/sql/sql.go:1653
+github.com/nagokos/calorie_backend/models.(*User).Create(0xc000015dc0, {0xc000136340, 0x3c})
+	/go/src/app/models/user.go:30 +0x23f
+github.com/nagokos/calorie_backend/controllers.UserCreate({0x7690f0, 0xc0001762a0}, 0xc000260000)
+	/go/src/app/controllers/user.go:42 +0x258
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x7690f0?, 0xc0001762a0?}, 0xc0001329f0?)
+	/usr/local/go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7690f0, 0xc0001762a0}, 0xc000260000)
+	/usr/local/go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0x768528?}, {0x7690f0, 0xc0001762a0}, 0xc000260000)
+	/usr/local/go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc000256000, {0x769348, 0xc00006f920})
+	/usr/local/go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x4db
+2021/12/18 06:11:26 server.go:3197: http: panic serving 192.168.80.1:60282: runtime error: invalid memory address or nil pointer dereference
+goroutine 20 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xbf
+panic({0x6a8a20, 0x8f4940})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+database/sql.(*DB).conn(0x0, {0x7692f8, 0xc000018680}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1290 +0x53
+database/sql.(*DB).exec(0x40?, {0x7692f8, 0xc000018680}, {0xc0000940c0, 0x5d}, {0xc0000d5920, 0x5, 0x5}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1657 +0x5d
+database/sql.(*DB).ExecContext(0xc0000ca168?, {0x7692f8, 0xc000018680}, {0xc0000940c0, 0x5d}, {0xc0000d5920, 0x5, 0x5})
+	/usr/local/go/src/database/sql/sql.go:1635 +0xe5
+database/sql.(*DB).Exec(...)
+	/usr/local/go/src/database/sql/sql.go:1653
+github.com/nagokos/calorie_backend/models.(*User).Create(0xc0000f4000, {0xc0000aa280, 0x3c})
+	/go/src/app/models/user.go:30 +0x23f
+github.com/nagokos/calorie_backend/controllers.UserCreate({0x769110, 0xc0000a62a0}, 0xc0000e0100)
+	/go/src/app/controllers/user.go:42 +0x258
+net/http.HandlerFunc.ServeHTTP(0x72?, {0x769110?, 0xc0000a62a0?}, 0xc0000d8660?)
+	/usr/local/go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x769110, 0xc0000a62a0}, 0xc0000e0100)
+	/usr/local/go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0x768548?}, {0x769110, 0xc0000a62a0}, 0xc0000e0100)
+	/usr/local/go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00009c0a0, {0x769368, 0xc0000981e0})
+	/usr/local/go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x4db
+2021/12/18 06:11:26 server.go:3197: http: panic serving 192.168.80.1:60284: runtime error: invalid memory address or nil pointer dereference
+goroutine 9 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xbf
+panic({0x6a8a20, 0x8f4940})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+database/sql.(*DB).conn(0x0, {0x7692f8, 0xc000018680}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1290 +0x53
+database/sql.(*DB).exec(0x40?, {0x7692f8, 0xc000018680}, {0xc000094180, 0x5d}, {0xc0000d5920, 0x5, 0x5}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1657 +0x5d
+database/sql.(*DB).ExecContext(0xc0000ca288?, {0x7692f8, 0xc000018680}, {0xc000094180, 0x5d}, {0xc0000d5920, 0x5, 0x5})
+	/usr/local/go/src/database/sql/sql.go:1635 +0xe5
+database/sql.(*DB).Exec(...)
+	/usr/local/go/src/database/sql/sql.go:1653
+github.com/nagokos/calorie_backend/models.(*User).Create(0xc0000f40e0, {0xc0000aa3c0, 0x3c})
+	/go/src/app/models/user.go:30 +0x23f
+github.com/nagokos/calorie_backend/controllers.UserCreate({0x769110, 0xc0000a6380}, 0xc0000e0200)
+	/go/src/app/controllers/user.go:42 +0x258
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x769110?, 0xc0000a6380?}, 0xc0000d88d0?)
+	/usr/local/go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x769110, 0xc0000a6380}, 0xc0000e0200)
+	/usr/local/go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0x768548?}, {0x769110, 0xc0000a6380}, 0xc0000e0200)
+	/usr/local/go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00010ed20, {0x769368, 0xc0000981e0})
+	/usr/local/go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x4db
+2021/12/18 06:11:35 server.go:3197: http: panic serving 192.168.80.1:60286: runtime error: invalid memory address or nil pointer dereference
+goroutine 34 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xbf
+panic({0x6a8a20, 0x8f4940})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+database/sql.(*DB).conn(0x0, {0x7692f8, 0xc000018680}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1290 +0x53
+database/sql.(*DB).exec(0x40?, {0x7692f8, 0xc000018680}, {0xc0001ac0c0, 0x5d}, {0xc000107920, 0x5, 0x5}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1657 +0x5d
+database/sql.(*DB).ExecContext(0xc0001b8168?, {0x7692f8, 0xc000018680}, {0xc0001ac0c0, 0x5d}, {0xc000107920, 0x5, 0x5})
+	/usr/local/go/src/database/sql/sql.go:1635 +0xe5
+database/sql.(*DB).Exec(...)
+	/usr/local/go/src/database/sql/sql.go:1653
+github.com/nagokos/calorie_backend/models.(*User).Create(0xc0001d8000, {0xc0001b2140, 0x3c})
+	/go/src/app/models/user.go:30 +0x23f
+github.com/nagokos/calorie_backend/controllers.UserCreate({0x769110, 0xc0001c21c0}, 0xc0001be100)
+	/go/src/app/controllers/user.go:42 +0x258
+net/http.HandlerFunc.ServeHTTP(0x72?, {0x769110?, 0xc0001c21c0?}, 0xc0001d2060?)
+	/usr/local/go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x769110, 0xc0001c21c0}, 0xc0001be100)
+	/usr/local/go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0x768548?}, {0x769110, 0xc0001c21c0}, 0xc0001be100)
+	/usr/local/go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0001b4000, {0x769368, 0xc0000981e0})
+	/usr/local/go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x4db
+2021/12/18 06:11:35 server.go:3197: http: panic serving 192.168.80.1:60288: runtime error: invalid memory address or nil pointer dereference
+goroutine 24 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xbf
+panic({0x6a8a20, 0x8f4940})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+database/sql.(*DB).conn(0x0, {0x7692f8, 0xc000018680}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1290 +0x53
+database/sql.(*DB).exec(0x40?, {0x7692f8, 0xc000018680}, {0xc000094240, 0x5d}, {0xc0000d5920, 0x5, 0x5}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1657 +0x5d
+database/sql.(*DB).ExecContext(0xc0000ca3a8?, {0x7692f8, 0xc000018680}, {0xc000094240, 0x5d}, {0xc0000d5920, 0x5, 0x5})
+	/usr/local/go/src/database/sql/sql.go:1635 +0xe5
+database/sql.(*DB).Exec(...)
+	/usr/local/go/src/database/sql/sql.go:1653
+github.com/nagokos/calorie_backend/models.(*User).Create(0xc0000f4150, {0xc0000aa540, 0x3c})
+	/go/src/app/models/user.go:30 +0x23f
+github.com/nagokos/calorie_backend/controllers.UserCreate({0x769110, 0xc0000a6460}, 0xc0000e0300)
+	/go/src/app/controllers/user.go:42 +0x258
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x769110?, 0xc0000a6460?}, 0xc0000d89e0?)
+	/usr/local/go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x769110, 0xc0000a6460}, 0xc0000e0300)
+	/usr/local/go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0x768548?}, {0x769110, 0xc0000a6460}, 0xc0000e0300)
+	/usr/local/go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00009c1e0, {0x769368, 0xc0000981e0})
+	/usr/local/go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x4db
+2021/12/18 06:12:57 server.go:3197: http: panic serving 192.168.80.1:60292: runtime error: invalid memory address or nil pointer dereference
+goroutine 35 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xbf
+panic({0x6a8a20, 0x8f4940})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+database/sql.(*DB).conn(0x0, {0x769338, 0xc0000bc630}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1290 +0x53
+database/sql.(*DB).exec(0x40?, {0x769338, 0xc0000bc630}, {0xc00008e2a0, 0x5d}, {0xc0000c5920, 0x5, 0x5}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1657 +0x5d
+database/sql.(*DB).ExecContext(0xc0000d42b8?, {0x769338, 0xc0000bc630}, {0xc00008e2a0, 0x5d}, {0xc0000c5920, 0x5, 0x5})
+	/usr/local/go/src/database/sql/sql.go:1635 +0xe5
+database/sql.(*DB).Exec(...)
+	/usr/local/go/src/database/sql/sql.go:1653
+github.com/nagokos/calorie_backend/models.(*User).Create(0xc0000abd50, {0xc0000f4200, 0x3c})
+	/go/src/app/models/user.go:30 +0x23f
+github.com/nagokos/calorie_backend/controllers.UserCreate({0x769150, 0xc000144000}, 0xc0001e6100)
+	/go/src/app/controllers/user.go:42 +0x258
+net/http.HandlerFunc.ServeHTTP(0x72?, {0x769150?, 0xc000144000?}, 0xc0000f0780?)
+	/usr/local/go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x769150, 0xc000144000}, 0xc0001e6100)
+	/usr/local/go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0x768588?}, {0x769150, 0xc000144000}, 0xc0001e6100)
+	/usr/local/go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0001b60a0, {0x7693a8, 0xc00018a390})
+	/usr/local/go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x4db
+2021/12/18 06:12:58 server.go:3197: http: panic serving 192.168.80.1:60294: runtime error: invalid memory address or nil pointer dereference
+goroutine 24 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xbf
+panic({0x6a8a20, 0x8f4940})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+database/sql.(*DB).conn(0x0, {0x769338, 0xc0000bc630}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1290 +0x53
+database/sql.(*DB).exec(0x40?, {0x769338, 0xc0000bc630}, {0xc00008e360, 0x5d}, {0xc0000c5920, 0x5, 0x5}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1657 +0x5d
+database/sql.(*DB).ExecContext(0xc0000d43d8?, {0x769338, 0xc0000bc630}, {0xc00008e360, 0x5d}, {0xc0000c5920, 0x5, 0x5})
+	/usr/local/go/src/database/sql/sql.go:1635 +0xe5
+database/sql.(*DB).Exec(...)
+	/usr/local/go/src/database/sql/sql.go:1653
+github.com/nagokos/calorie_backend/models.(*User).Create(0xc0000abe30, {0xc0000f43c0, 0x3c})
+	/go/src/app/models/user.go:30 +0x23f
+github.com/nagokos/calorie_backend/controllers.UserCreate({0x769150, 0xc0001440e0}, 0xc000164000)
+	/go/src/app/controllers/user.go:42 +0x258
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x769150?, 0xc0001440e0?}, 0xc0000f0960?)
+	/usr/local/go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x769150, 0xc0001440e0}, 0xc000164000)
+	/usr/local/go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0x768588?}, {0x769150, 0xc0001440e0}, 0xc000164000)
+	/usr/local/go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000c8c80, {0x7693a8, 0xc00018a390})
+	/usr/local/go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x4db
+2021/12/18 06:14:03 server.go:3197: http: panic serving 192.168.80.1:60300: runtime error: invalid memory address or nil pointer dereference
+goroutine 19 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xbf
+panic({0x6a8a20, 0x8f4940})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+database/sql.(*DB).conn(0x0, {0x769338, 0xc000018680}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1290 +0x53
+database/sql.(*DB).exec(0x40?, {0x769338, 0xc000018680}, {0xc00008e0c0, 0x5d}, {0xc00010b920, 0x5, 0x5}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1657 +0x5d
+database/sql.(*DB).ExecContext(0xc0000ba0f0?, {0x769338, 0xc000018680}, {0xc00008e0c0, 0x5d}, {0xc00010b920, 0x5, 0x5})
+	/usr/local/go/src/database/sql/sql.go:1635 +0xe5
+database/sql.(*DB).Exec(...)
+	/usr/local/go/src/database/sql/sql.go:1653
+github.com/nagokos/calorie_backend/models.(*User).Create(0xc0000ca000, {0xc0000cc100, 0x3c})
+	/go/src/app/models/user.go:31 +0x27f
+github.com/nagokos/calorie_backend/controllers.UserCreate({0x769150, 0xc0000c4000}, 0xc0001e0100)
+	/go/src/app/controllers/user.go:42 +0x258
+net/http.HandlerFunc.ServeHTTP(0x72?, {0x769150?, 0xc0000c4000?}, 0xc0000b00a0?)
+	/usr/local/go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x769150, 0xc0000c4000}, 0xc0001e0100)
+	/usr/local/go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0x768588?}, {0x769150, 0xc0000c4000}, 0xc0001e0100)
+	/usr/local/go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0001ae0a0, {0x7693a8, 0xc0001922a0})
+	/usr/local/go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x4db
+2021/12/18 06:14:04 server.go:3197: http: panic serving 192.168.80.1:60302: runtime error: invalid memory address or nil pointer dereference
+goroutine 35 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xbf
+panic({0x6a8a20, 0x8f4940})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+database/sql.(*DB).conn(0x0, {0x769338, 0xc000018680}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1290 +0x53
+database/sql.(*DB).exec(0x40?, {0x769338, 0xc000018680}, {0xc00008e180, 0x5d}, {0xc00010b920, 0x5, 0x5}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1657 +0x5d
+database/sql.(*DB).ExecContext(0xc0000ba210?, {0x769338, 0xc000018680}, {0xc00008e180, 0x5d}, {0xc00010b920, 0x5, 0x5})
+	/usr/local/go/src/database/sql/sql.go:1635 +0xe5
+database/sql.(*DB).Exec(...)
+	/usr/local/go/src/database/sql/sql.go:1653
+github.com/nagokos/calorie_backend/models.(*User).Create(0xc0000ca0e0, {0xc0000cc2c0, 0x3c})
+	/go/src/app/models/user.go:31 +0x27f
+github.com/nagokos/calorie_backend/controllers.UserCreate({0x769150, 0xc0000c40e0}, 0xc0000ee000)
+	/go/src/app/controllers/user.go:42 +0x258
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x769150?, 0xc0000c40e0?}, 0xc0000b0240?)
+	/usr/local/go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x769150, 0xc0000c40e0}, 0xc0000ee000)
+	/usr/local/go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0x768588?}, {0x769150, 0xc0000c40e0}, 0xc0000ee000)
+	/usr/local/go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000ec000, {0x7693a8, 0xc0001922a0})
+	/usr/local/go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x4db
+2021/12/18 06:14:47 server.go:3197: http: panic serving 192.168.80.1:60306: runtime error: invalid memory address or nil pointer dereference
+goroutine 23 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xbf
+panic({0x6a8a20, 0x8f4940})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+database/sql.(*DB).conn(0x0, {0x769358, 0xc0000bc630}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1290 +0x53
+database/sql.(*DB).exec(0x40?, {0x769358, 0xc0000bc630}, {0xc00001a0c0, 0x5d}, {0xc0000c7920, 0x5, 0x5}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1657 +0x5d
+database/sql.(*DB).ExecContext(0xc000016120?, {0x769358, 0xc0000bc630}, {0xc00001a0c0, 0x5d}, {0xc0000c7920, 0x5, 0x5})
+	/usr/local/go/src/database/sql/sql.go:1635 +0xe5
+database/sql.(*DB).Exec(...)
+	/usr/local/go/src/database/sql/sql.go:1653
+github.com/nagokos/calorie_backend/models.(*User).Create(0xc000014070, {0xc000200100, 0x3c})
+	/go/src/app/models/user.go:31 +0x28f
+github.com/nagokos/calorie_backend/controllers.UserCreate({0x769170, 0xc00007a000}, 0xc00015e100)
+	/go/src/app/controllers/user.go:42 +0x258
+net/http.HandlerFunc.ServeHTTP(0x72?, {0x769170?, 0xc00007a000?}, 0xc00006a050?)
+	/usr/local/go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x769170, 0xc00007a000}, 0xc00015e100)
+	/usr/local/go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0x7685a8?}, {0x769170, 0xc00007a000}, 0xc00015e100)
+	/usr/local/go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000c8d20, {0x7693c8, 0xc00009b8f0})
+	/usr/local/go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x4db
+2021/12/18 06:14:47 server.go:3197: http: panic serving 192.168.80.1:60308: runtime error: invalid memory address or nil pointer dereference
+goroutine 35 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xbf
+panic({0x6a8a20, 0x8f4940})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+database/sql.(*DB).conn(0x0, {0x769358, 0xc0000bc630}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1290 +0x53
+database/sql.(*DB).exec(0x40?, {0x769358, 0xc0000bc630}, {0xc00001a180, 0x5d}, {0xc0000c7920, 0x5, 0x5}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1657 +0x5d
+database/sql.(*DB).ExecContext(0xc000016228?, {0x769358, 0xc0000bc630}, {0xc00001a180, 0x5d}, {0xc0000c7920, 0x5, 0x5})
+	/usr/local/go/src/database/sql/sql.go:1635 +0xe5
+database/sql.(*DB).Exec(...)
+	/usr/local/go/src/database/sql/sql.go:1653
+github.com/nagokos/calorie_backend/models.(*User).Create(0xc000014150, {0xc000200240, 0x3c})
+	/go/src/app/models/user.go:31 +0x28f
+github.com/nagokos/calorie_backend/controllers.UserCreate({0x769170, 0xc00007a0e0}, 0xc0001c2000)
+	/go/src/app/controllers/user.go:42 +0x258
+net/http.HandlerFunc.ServeHTTP(0x7f2f046892b0?, {0x769170?, 0xc00007a0e0?}, 0xc00006a320?)
+	/usr/local/go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x769170, 0xc00007a0e0}, 0xc0001c2000)
+	/usr/local/go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0x7685a8?}, {0x769170, 0xc00007a0e0}, 0xc0001c2000)
+	/usr/local/go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0001b4000, {0x7693c8, 0xc00009b8f0})
+	/usr/local/go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x4db
+2021/12/18 06:14:54 server.go:3197: http: panic serving 192.168.80.1:60310: runtime error: invalid memory address or nil pointer dereference
+goroutine 7 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xbf
+panic({0x6a8a20, 0x8f4940})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+database/sql.(*DB).conn(0x0, {0x769358, 0xc0000bc630}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1290 +0x53
+database/sql.(*DB).exec(0x40?, {0x769358, 0xc0000bc630}, {0xc00008e300, 0x5d}, {0xc000167920, 0x5, 0x5}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1657 +0x5d
+database/sql.(*DB).ExecContext(0xc0000d43a8?, {0x769358, 0xc0000bc630}, {0xc00008e300, 0x5d}, {0xc000167920, 0x5, 0x5})
+	/usr/local/go/src/database/sql/sql.go:1635 +0xe5
+database/sql.(*DB).Exec(...)
+	/usr/local/go/src/database/sql/sql.go:1653
+github.com/nagokos/calorie_backend/models.(*User).Create(0xc0000abd50, {0xc0000f4340, 0x3c})
+	/go/src/app/models/user.go:31 +0x28f
+github.com/nagokos/calorie_backend/controllers.UserCreate({0x769170, 0xc0001462a0}, 0xc00015e200)
+	/go/src/app/controllers/user.go:42 +0x258
+net/http.HandlerFunc.ServeHTTP(0x72?, {0x769170?, 0xc0001462a0?}, 0xc0000f08c0?)
+	/usr/local/go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x769170, 0xc0001462a0}, 0xc00015e200)
+	/usr/local/go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0x7685a8?}, {0x769170, 0xc0001462a0}, 0xc00015e200)
+	/usr/local/go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc000232000, {0x7693c8, 0xc00009b8f0})
+	/usr/local/go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x4db
+2021/12/18 06:14:55 server.go:3197: http: panic serving 192.168.80.1:60312: runtime error: invalid memory address or nil pointer dereference
+goroutine 26 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xbf
+panic({0x6a8a20, 0x8f4940})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+database/sql.(*DB).conn(0x0, {0x769358, 0xc0000bc630}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1290 +0x53
+database/sql.(*DB).exec(0x40?, {0x769358, 0xc0000bc630}, {0xc00001a2a0, 0x5d}, {0xc0000c7920, 0x5, 0x5}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1657 +0x5d
+database/sql.(*DB).ExecContext(0xc0000163a8?, {0x769358, 0xc0000bc630}, {0xc00001a2a0, 0x5d}, {0xc0000c7920, 0x5, 0x5})
+	/usr/local/go/src/database/sql/sql.go:1635 +0xe5
+database/sql.(*DB).Exec(...)
+	/usr/local/go/src/database/sql/sql.go:1653
+github.com/nagokos/calorie_backend/models.(*User).Create(0xc0000141c0, {0xc0002003c0, 0x3c})
+	/go/src/app/models/user.go:31 +0x28f
+github.com/nagokos/calorie_backend/controllers.UserCreate({0x769170, 0xc00007a380}, 0xc00015e300)
+	/go/src/app/controllers/user.go:42 +0x258
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x769170?, 0xc00007a380?}, 0xc00006a410?)
+	/usr/local/go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x769170, 0xc00007a380}, 0xc00015e300)
+	/usr/local/go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0x7685a8?}, {0x769170, 0xc00007a380}, 0xc00015e300)
+	/usr/local/go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000c8e60, {0x7693c8, 0xc00009b8f0})
+	/usr/local/go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x4db
+2021/12/18 06:16:01 server.go:3197: http: panic serving 192.168.80.1:60316: runtime error: invalid memory address or nil pointer dereference
+goroutine 19 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xbf
+panic({0x6a7a20, 0x8f3940})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+database/sql.(*DB).conn(0x0, {0x7682f8, 0xc000018680}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1290 +0x53
+database/sql.(*DB).exec(0x40?, {0x7682f8, 0xc000018680}, {0xc0000d0000, 0x5d}, {0xc00010b920, 0x5, 0x5}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1657 +0x5d
+database/sql.(*DB).ExecContext(0xc0000a00f0?, {0x7682f8, 0xc000018680}, {0xc0000d0000, 0x5d}, {0xc00010b920, 0x5, 0x5})
+	/usr/local/go/src/database/sql/sql.go:1635 +0xe5
+database/sql.(*DB).Exec(...)
+	/usr/local/go/src/database/sql/sql.go:1653
+github.com/nagokos/calorie_backend/models.(*User).Create(0xc0000bc000, {0xc0000be100, 0x3c})
+	/go/src/app/models/user.go:31 +0x28f
+github.com/nagokos/calorie_backend/controllers.UserCreate({0x768110, 0xc0000ac000}, 0xc0001c8100)
+	/go/src/app/controllers/user.go:42 +0x258
+net/http.HandlerFunc.ServeHTTP(0x72?, {0x768110?, 0xc0000ac000?}, 0xc0000920e0?)
+	/usr/local/go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x768110, 0xc0000ac000}, 0xc0001c8100)
+	/usr/local/go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0x767548?}, {0x768110, 0xc0000ac000}, 0xc0001c8100)
+	/usr/local/go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00019e0a0, {0x768368, 0xc0001882a0})
+	/usr/local/go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x4db
+2021/12/18 06:16:01 server.go:3197: http: panic serving 192.168.80.1:60318: runtime error: invalid memory address or nil pointer dereference
+goroutine 21 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xbf
+panic({0x6a7a20, 0x8f3940})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+database/sql.(*DB).conn(0x0, {0x7682f8, 0xc000018680}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1290 +0x53
+database/sql.(*DB).exec(0x40?, {0x7682f8, 0xc000018680}, {0xc0000d00c0, 0x5d}, {0xc00010b920, 0x5, 0x5}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1657 +0x5d
+database/sql.(*DB).ExecContext(0xc0000a01f8?, {0x7682f8, 0xc000018680}, {0xc0000d00c0, 0x5d}, {0xc00010b920, 0x5, 0x5})
+	/usr/local/go/src/database/sql/sql.go:1635 +0xe5
+database/sql.(*DB).Exec(...)
+	/usr/local/go/src/database/sql/sql.go:1653
+github.com/nagokos/calorie_backend/models.(*User).Create(0xc0000bc0e0, {0xc0000be240, 0x3c})
+	/go/src/app/models/user.go:31 +0x28f
+github.com/nagokos/calorie_backend/controllers.UserCreate({0x768110, 0xc0000ac0e0}, 0xc0001c8200)
+	/go/src/app/controllers/user.go:42 +0x258
+net/http.HandlerFunc.ServeHTTP(0x7fc2d6700a10?, {0x768110?, 0xc0000ac0e0?}, 0xc0000922d0?)
+	/usr/local/go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x768110, 0xc0000ac0e0}, 0xc0001c8200)
+	/usr/local/go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0x767548?}, {0x768110, 0xc0000ac0e0}, 0xc0001c8200)
+	/usr/local/go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00019e1e0, {0x768368, 0xc0001882a0})
+	/usr/local/go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x4db
+2021/12/18 06:16:04 server.go:3197: http: panic serving 192.168.80.1:60320: runtime error: invalid memory address or nil pointer dereference
+goroutine 36 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1825 +0xbf
+panic({0x6a7a20, 0x8f3940})
+	/usr/local/go/src/runtime/panic.go:844 +0x258
+database/sql.(*DB).conn(0x0, {0x7682f8, 0xc000018680}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1290 +0x53
+database/sql.(*DB).exec(0x40?, {0x7682f8, 0xc000018680}, {0xc00001a3c0, 0x5d}, {0xc00010d920, 0x5, 0x5}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1657 +0x5d
+database/sql.(*DB).ExecContext(0xc0000162e8?, {0x7682f8, 0xc000018680}, {0xc00001a3c0, 0x5d}, {0xc00010d920, 0x5, 0x5})
+	/usr/local/go/src/database/sql/sql.go:1635 +0xe5
+database/sql.(*DB).Exec(...)
+	/usr/local/go/src/database/sql/sql.go:1653
+github.com/nagokos/calorie_backend/models.(*User).Create(0xc000015dc0, {0xc0001361c0, 0x3c})
+	/go/src/app/models/user.go:31 +0x28f
+github.com/nagokos/calorie_backend/controllers.UserCreate({0x768110, 0xc00017e000}, 0xc0000fc000)
+	/go/src/app/controllers/user.go:42 +0x258
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x768110?, 0xc00017e000?}, 0xc000132770?)
+	/usr/local/go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x768110, 0xc00017e000}, 0xc0000fc000)
+	/usr/local/go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0x767548?}, {0x768110, 0xc00017e000}, 0xc0000fc000)
+	/usr/local/go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000fa000, {0x768368, 0xc0001882a0})
+	/usr/local/go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:3071 +0x4db
+2021/12/18 06:17:18 user.go:34: Error 1292: Incorrect datetime value: '0001-01-01T00:00:00Z' for column 'created_at' at row 1
+2021/12/18 15:41:28 main.go:24: error:listen tcp :8080: bind: address already in use
+2021/12/18 15:41:39 main.go:24: error:listen tcp :8080: bind: address already in use
+2021/12/18 15:41:56 main.go:24: error:listen tcp :8080: bind: address already in use
+2021/12/18 15:44:33 main.go:26: error:listen tcp :8080: bind: address already in use
+2021/12/18 15:45:03 main.go:24: error:listen tcp :8080: bind: address already in use
+2021/12/18 15:46:23 main.go:26: error:listen tcp :8080: bind: address already in use
+2021/12/18 16:31:26 user.go:35: Error 1146: Table 'go_database.users' doesn't exist
+2021/12/18 16:32:48 user.go:35: Error 1146: Table 'go_database.users' doesn't exist
+2021/12/18 16:33:57 user.go:33: Error 1146: Table 'go_database.users' doesn't exist
+2021/12/18 20:12:46 user.go:33: Error 1146: Table 'go_database.users' doesn't exist
+2021/12/18 20:24:22 user.go:33: Error 1062: Duplicate entry 'messikurirona7575@yahoo.co.jo' for key 'users.email'
+2021/12/18 20:28:36 user.go:45: Error 1062: Duplicate entry 'messikurirona7575@yahoo.co.jo' for key 'users.email'
+2021/12/18 20:30:11 user.go:45: Error 1062: Duplicate entry 'messikurirona7575@yahoo.co.jo' for key 'users.email'
+2021/12/18 20:32:39 user.go:45: Error 1062: Duplicate entry 'messikurirona7575@yahoo.co.jo' for key 'users.email'
+2021/12/18 20:32:49 user.go:45: a
+2021/12/18 20:33:46 user.go:45: Error 1062: Duplicate entry 'messikurirodna7575@yahoo.co.jo' for key 'users.email'
+2021/12/18 20:40:08 user.go:44: Error 1062: Duplicate entry 'messikurirona7575@yahoo.co.jp' for key 'users.email'
+2021/12/18 20:41:41 user.go:44: Error 1062: Duplicate entry 'messikurirona7575@yahoo.co.jp' for key 'users.email'
+2021/12/18 21:00:16 user.go:59: Error 1062: Duplicate entry 'messikurirona7575@yahoo.co.jo' for key 'users.email'
+2021/12/18 21:02:24 user.go:59: Error 1062: Duplicate entry 'messikurirona7575@yahoo.co.jo' for key 'users.email'
+2021/12/18 21:02:41 user.go:59: Error 1062: Duplicate entry 'messikurirona7575@yahoo.co.jo' for key 'users.email'
+2021/12/18 21:20:08 user.go:58: Error 1062: Duplicate entry 'messikurirona7575@yahoo.co.jo' for key 'users.email'
+2021/12/18 21:53:47 user.go:59: Error 1062: Duplicate entry 'messikurirona7575@yahoo.co.jp' for key 'users.email'
+2021/12/18 21:53:58 user.go:59: Error 1062: Duplicate entry 'messikurirona7575@yahoo.co.jp' for key 'users.email'
+2021/12/18 21:54:50 user.go:59: Error 1062: Duplicate entry 'messikurirona7575@yahoo.co.jp' for key 'users.email'
+2021/12/18 22:38:14 user.go:73: 1062
+2021/12/18 22:38:14 user.go:75: Error 1062: Duplicate entry 'messikurirona7575@yahoo.co.jp' for key 'users.email'
+2021/12/18 22:39:38 user.go:73: 1062
+2021/12/18 22:39:38 user.go:74: Duplicate entry 'messikurirona7575@yahoo.co.jp' for key 'users.email'
+2021/12/18 22:39:38 user.go:76: Error 1062: Duplicate entry 'messikurirona7575@yahoo.co.jp' for key 'users.email'
+2021/12/18 22:45:42 user.go:77: Error 1062: Duplicate entry 'messikurirona7575@yahoo.co.jp' for key 'users.email'
+2021/12/18 22:50:26 user.go:77: Error 1062: Duplicate entry 'nago@mgial.com' for key 'users.email'
+2021/12/18 22:51:15 user.go:77: Error 1062: Duplicate entry 'nago@mgial.com' for key 'users.email'
+2021/12/19 14:09:14 user.go:77: Error 1062: Duplicate entry 'messikurirona7575@yahoo.co.jo' for key 'users.email'
+2021/12/19 14:09:28 user.go:77: Error 1062: Duplicate entry 'Naog8898090@k.com' for key 'users.email'
+2021/12/19 14:12:26 user.go:77: Error 1062: Duplicate entry 'kosuda0428@gmail.com' for key 'users.email'

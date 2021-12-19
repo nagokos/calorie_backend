@@ -1,5 +1,17 @@
 version: '3'
 services:
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: go_database
+      TZ: 'Asia/Tokyo'
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    volumes:
+      - db-data:/var/lib/mysql
+      - ./db/my.cnf:/etc/mysql/conf.d/my.cnf
+    ports:
+      - 3306:3306
   web:
     build: .
     ports:
@@ -7,7 +19,13 @@ services:
     volumes:
       - .:/go/src/app
       - go_path:/go
+    environment:
+      TZ: 'Asia/Tokyo'
     tty: true
     stdin_open: true
+    depends_on:
+      - db
 volumes:
   go_path:
+  db-data:
+    driver: local

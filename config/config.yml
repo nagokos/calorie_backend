@@ -1,0 +1,7 @@
+db:
+  name: calorie.sql
+  driver: mysql
+  dbconf: root:root@tcp(db:3306)/go_database
+web:
+  port: 8080
+  log: calorie.log
